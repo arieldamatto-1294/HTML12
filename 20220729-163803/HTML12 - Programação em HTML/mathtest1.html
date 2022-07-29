@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home Media Project | Teste de Raciocínio Rápido</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=RocknRoll+One:400,700"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheets/mathtest1.css">
+  </head>
+  <body>
+    <main>
+      <div>
+        <header> <!-- Cabeçalho do documento -->
+          <div class="container"></div>
+            <img src="assets/HMP_Logo_v2019.08.01.1.png" id="img-logo">
+            <h2>
+              Teste de Raciocínio Rápido
+            </h2>
+          </div>
+        </header>
+        <div class="section" id="section-1"> <!-- Tela de introdução e preferências do teste -->
+          <div class="container">
+            <div class="ridged-border" id="intro-box">
+              <p>
+                Bem-vindo ao Teste de Raciocínio Rápido orientado à Matemática. O objetivo é responder às
+                questões o mais rapidamente (e precisamente) possível. O teste é composto por uma bateria
+                de questões focadas nas 4 operações básicas: adição, subtração, multiplicação e divisão.
+                Ao final do teste, você será ranqueado com base no montante de acertos, e no tempo gasto
+                para a realização. Boa sorte!
+              </p>
+            </div>
+            <div class="ridged-border" id="options-box">
+              <div>
+                <p>Número de questões:</p>
+                <input type="number" id="question-amount" min="1" max="1000" value="100">
+              </div>
+              <div>
+                <input type="checkbox" checked>
+                <p>Adição</p>
+                <p>Adições até:</p>
+                <input type="number" min="10" max="99" value="10">
+                <p style="margin-left: 4px">+</p>
+                <input type="number" min="3" max="99" value="10">
+              </div>
+              <div>
+                <input type="checkbox">
+                <p>Subtração</p>
+                <p>Subtrações até:</p>
+                <input type="number" min="10" max="99" value="20">
+                <p style="margin-left: 4px">-</p>
+                <input type="number" min="1" max="50" value="10">
+              </div>
+              <div>
+                <input type="checkbox">
+                <p>Multiplicação</p>
+                <p>Tabuadas até:</p>
+                <input type="number" min="10" max="99" value="10">
+              </div>
+              <div>
+                <input type="checkbox">
+                <p>Divisão</p>
+                <p>Permitir divisões maiores:</p>
+                <input type="checkbox">
+              </div>
+            </div>
+            <div class="button" id="button-start">
+              <p>Iniciar o teste</p>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="section-2"> <!-- Área de aplicação do teste -->
+          <div class="container">
+            <div class="ridged-border">
+              <p id="question-number">Questão 1</p>
+              <p id="chrono">Tempo decorrido: 00:00</p>
+            </div>
+            <div class="ridged-border" id="exercise-box">
+              <div style="display: flex">
+                <p id="exe01">0</p>
+                <p id="exe02">+</p>
+                <p id="exe03">0</p>
+                <p>=</p>
+                <input type="number" id="answer-input" onkeypress="press_enter(event)">
+              </div>
+            </div>
+            <div class="ridged-border">
+              <div class="button" id="button-abort">
+                <p>Abortar</p>
+              </div>
+              <div class="button" id="button-confirm">
+                <p>Confirmar resposta</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="section-3"> <!-- Tela de carregamento dos resultados -->
+          <div class="ridged-border">
+            <p>
+              Teste encerrado. Por favor, aguarde enquanto analisamos as suas respostas.
+            </p>
+            <div class="loader"></div>
+          </div>
+        </div>
+        <div class="section" id="section-4"> <!-- Relatório do teste -->
+          <div>
+            <div class="ridged-border" id="test-results">
+              <p style="font: 700 22px 'Open Sans'; text-align: center">Resultados do teste</p>
+              <div>
+                <p>Nº de acertos:</p>
+                <p></p>
+              </div>
+              <div>
+                <p>% de acertos:</p>
+                <p></p>
+              </div>
+              <div>
+                <p>Tempo decorrido:</p>
+                <p></p>
+              </div>
+              <div>
+                <p>Questões/minuto:</p>
+                <p></p>
+              </div>
+              <div>
+                <p>Índice de acertos/minuto:</p>
+                <p></p>
+              </div>
+            </div>
+            <div>
+              <div class="button" id="button-print">
+                <p>Imprimir resultados</p>
+              </div>
+              <div class="button" id="button-return">
+                <p>Fazer outro teste</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer> <!-- Rodapé do documento -->
+      <p style="font-style: italic; text-align: center">© 2021-2022, the Home Media Project.</p>
+    </footer> <!-- Término do rodapé -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="javascript/mathtest1.js"></script>
+
+  </body>
+</html>

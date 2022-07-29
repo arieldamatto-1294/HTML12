@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jogo: Guess the Color</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=RocknRoll+One:400,700"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheets/guess_the_color_1.css">
+  </head>
+
+  <body>
+    <main>
+      <div>
+        <header> <!-- Cabeçalho do documento -->
+          <div class="container" id="page-header">
+            <img src="assets/HMP_Logo_v2019.08.01.1.png" id="img-logo">
+            <h2>
+              Teste de Raciocínio Rápido
+            </h2>
+          </div>
+        </header>
+        <div class="section" id="section-1">
+          <div class="container">
+            <div class="ridged-box">
+              <h3>Sobre o jogo</h3>
+              <p>
+                <span class="text-bold">Guess the Color</span> é um jogo cujo objetivo é o de estimular a
+                atividade cerebral. Para isso, você deve escrever, na caixa abaixo, a cor usada na fonte,
+                e não a cor descrita pelo texto. <br> Você tem 1 minuto para tentar descobrir o maior
+                número possível de cores. Boa sorte!
+              </p>
+              <div class="button" id="button-start">
+                <p>Iniciar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="section-2">
+          <div class="container">
+            <div class="ridged-box">
+              <p id="timer">Tempo restante: 01:00</p>
+              <div id="color-txt">
+                <p style="color: #000000">Vermelho</p>
+                <p style="color: #000000">Verde</p>
+                <p style="color: #000000">Azul</p>
+                <p style="color: #000000">Amarelo</p>
+                <p style="color: #000000">Magenta</p>
+                <p style="color: #000000">Ciano</p>
+                <p style="color: #000000">Laranja</p>
+                <p style="color: #000000">Índigo</p>
+                <p style="color: #000000">Cinza</p>
+                <p style="color: #000000">Marrom</p>
+                <p style="color: #000000">Roxo</p>
+                <p style="color: #ff0000">Preto</p>
+                <p style="color: #ff0000">Verde</p>
+                <p style="color: #ff0000">Azul</p>
+                <p style="color: #ff0000">Amarelo</p>
+                <p style="color: #ff0000">Magenta</p>
+                <p style="color: #ff0000">Ciano</p>
+                <p style="color: #ff0000">Laranja</p>
+                <p style="color: #ff0000">Índigo</p>
+                <p style="color: #ff0000">Cinza</p>
+                <p style="color: #ff0000">Marrom</p>
+                <p style="color: #ff0000">Roxo</p>
+                <p style="color: #00ff00">Preto</p>
+                <p style="color: #00ff00">Vermelho</p>
+                <p style="color: #00ff00">Azul</p>
+                <p style="color: #00ff00">Amarelo</p>
+                <p style="color: #00ff00">Magenta</p>
+                <p style="color: #00ff00">Ciano</p>
+                <p style="color: #00ff00">Laranja</p>
+                <p style="color: #00ff00">Índigo</p>
+                <p style="color: #00ff00">Cinza</p>
+                <p style="color: #00ff00">Marrom</p>
+                <p style="color: #00ff00">Roxo</p>
+                <p style="color: #0000ff">Preto</p>
+                <p style="color: #0000ff">Vermelho</p>
+                <p style="color: #0000ff">Verde</p>
+                <p style="color: #0000ff">Amarelo</p>
+                <p style="color: #0000ff">Magenta</p>
+                <p style="color: #0000ff">Ciano</p>
+                <p style="color: #0000ff">Laranja</p>
+                <p style="color: #0000ff">Índigo</p>
+                <p style="color: #0000ff">Cinza</p>
+                <p style="color: #0000ff">Marrom</p>
+                <p style="color: #0000ff">Roxo</p>
+                <p style="color: #ffff00">Preto</p>
+                <p style="color: #ffff00">Vermelho</p>
+                <p style="color: #ffff00">Verde</p>
+                <p style="color: #ffff00">Azul</p>
+                <p style="color: #ffff00">Magenta</p>
+                <p style="color: #ffff00">Ciano</p>
+                <p style="color: #ffff00">Laranja</p>
+                <p style="color: #ffff00">Índigo</p>
+                <p style="color: #ffff00">Cinza</p>
+                <p style="color: #ffff00">Marrom</p>
+                <p style="color: #ffff00">Roxo</p>
+                <p style="color: #ff00ff">Preto</p>
+                <p style="color: #ff00ff">Vermelho</p>
+                <p style="color: #ff00ff">Verde</p>
+                <p style="color: #ff00ff">Azul</p>
+                <p style="color: #ff00ff">Amarelo</p>
+                <p style="color: #ff00ff">Ciano</p>
+                <p style="color: #ff00ff">Laranja</p>
+                <p style="color: #ff00ff">Índigo</p>
+                <p style="color: #ff00ff">Cinza</p>
+                <p style="color: #ff00ff">Marrom</p>
+                <p style="color: #ff00ff">Roxo</p>
+                <p style="color: #00ffff">Preto</p>
+                <p style="color: #00ffff">Vermelho</p>
+                <p style="color: #00ffff">Verde</p>
+                <p style="color: #00ffff">Azul</p>
+                <p style="color: #00ffff">Amarelo</p>
+                <p style="color: #00ffff">Magenta</p>
+                <p style="color: #00ffff">Laranja</p>
+                <p style="color: #00ffff">Índigo</p>
+                <p style="color: #00ffff">Cinza</p>
+                <p style="color: #00ffff">Marrom</p>
+                <p style="color: #00ffff">Roxo</p>
+                <p style="color: #ff8000">Preto</p>
+                <p style="color: #ff8000">Vermelho</p>
+                <p style="color: #ff8000">Verde</p>
+                <p style="color: #ff8000">Azul</p>
+                <p style="color: #ff8000">Amarelo</p>
+                <p style="color: #ff8000">Magenta</p>
+                <p style="color: #ff8000">Ciano</p>
+                <p style="color: #ff8000">Índigo</p>
+                <p style="color: #ff8000">Cinza</p>
+                <p style="color: #ff8000">Marrom</p>
+                <p style="color: #ff8000">Roxo</p>
+                <p style="color: #000080">Preto</p>
+                <p style="color: #000080">Vermelho</p>
+                <p style="color: #000080">Verde</p>
+                <p style="color: #000080">Azul</p>
+                <p style="color: #000080">Amarelo</p>
+                <p style="color: #000080">Magenta</p>
+                <p style="color: #000080">Ciano</p>
+                <p style="color: #000080">Laranja</p>
+                <p style="color: #000080">Cinza</p>
+                <p style="color: #000080">Marrom</p>
+                <p style="color: #000080">Roxo</p>
+                <p style="color: #999999">Preto</p>
+                <p style="color: #999999">Vermelho</p>
+                <p style="color: #999999">Verde</p>
+                <p style="color: #999999">Azul</p>
+                <p style="color: #999999">Amarelo</p>
+                <p style="color: #999999">Magenta</p>
+                <p style="color: #999999">Ciano</p>
+                <p style="color: #999999">Laranja</p>
+                <p style="color: #999999">Índigo</p>
+                <p style="color: #999999">Marrom</p>
+                <p style="color: #999999">Roxo</p>
+                <p style="color: #804000">Preto</p>
+                <p style="color: #804000">Vermelho</p>
+                <p style="color: #804000">Verde</p>
+                <p style="color: #804000">Azul</p>
+                <p style="color: #804000">Amarelo</p>
+                <p style="color: #804000">Magenta</p>
+                <p style="color: #804000">Ciano</p>
+                <p style="color: #804000">Laranja</p>
+                <p style="color: #804000">Índigo</p>
+                <p style="color: #804000">Cinza</p>
+                <p style="color: #804000">Roxo</p>
+                <p style="color: #4000c0">Preto</p>
+                <p style="color: #4000c0">Vermelho</p>
+                <p style="color: #4000c0">Verde</p>
+                <p style="color: #4000c0">Azul</p>
+                <p style="color: #4000c0">Amarelo</p>
+                <p style="color: #4000c0">Magenta</p>
+                <p style="color: #4000c0">Ciano</p>
+                <p style="color: #4000c0">Laranja</p>
+                <p style="color: #4000c0">Índigo</p>
+                <p style="color: #4000c0">Cinza</p>
+                <p style="color: #4000c0">Marrom</p>
+              </div>
+              <div id="button-option">
+                <div class="button"><p>Preto</p></div>
+                <div class="button"><p>Vermelho</p></div>
+                <div class="button"><p>Verde</p></div>
+                <div class="button"><p>Azul</p></div>
+                <div class="button"><p>Amarelo</p></div>
+                <div class="button"><p>Magenta</p></div>
+                <div class="button"><p>Ciano</p></div>
+                <div class="button"><p>Laranja</p></div>
+                <div class="button"><p>Índigo</p></div>
+                <div class="button"><p>Cinza</p></div>
+                <div class="button"><p>Marrom</p></div>
+                <div class="button"><p>Roxo</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="section-3">
+          <div class="container">
+            <div class="ridged-box">
+              <h3>Fim de jogo!</h3>
+              <p class="text-centered">Número de acertos:</p>
+              <p class="text-centered" id="final-score">0</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+    <footer> <!-- Rodapé do documento -->
+      <p style="font-style: italic; text-align: center">© 2022, the Home Media Project.</p>
+    </footer> <!-- Término do rodapé -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="javascript-files/guess_the_color_1.js"></script>
+
+  </body>
+
+
+</html>

@@ -1,0 +1,127 @@
+
+
+h2 {
+  height: fit-content;
+  margin: auto;
+  margin-left: 0px;
+  padding: 8px 20px 2px;
+  font: 700 28px "Ubuntu";
+  color: rgb(255, 164, 38);
+  text-shadow: 2px 2px 2px white;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+header { /* estilo do cabeçalho */
+  margin: -8px 0px 22px;
+  background: linear-gradient(
+    rgb(255, 102, 0) 0%,
+    rgb(0, 32, 96) 30%,
+    rgb(0, 0, 0) 40%,
+    rgb(0, 176, 80) 50%,
+    rgb(0, 0, 0) 60%,
+    rgb(0, 176, 240) 100%
+  );
+  display: flex;
+}
+p {
+  margin: 0;
+}
+.button {
+  width: fit-content;
+  width: -moz-fit-content;   
+  display: flex;
+  margin: 18px auto;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 40%;
+  transition: .4s;
+}
+.button > p {
+  margin: 4px auto;
+  text-align: center;
+  font-weight: 700;
+}
+.ridged-box {
+  max-width: 560px;
+  height: 320px;
+  margin: auto;
+  padding: 12px;
+  border: 4px ridge #999999;
+}
+.section {
+  display: flex;
+}
+.text-centered {
+  text-align: center;
+}
+.text-centered:nth-of-type(1) {
+  margin-top: 80px;
+}
+#button-option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#button-option > div {
+  width: 120px;
+  margin: 4px;
+  border: 2px ridge #999999;
+  border-radius: 8px;
+}
+#button-option > div > p {
+  text-align: center;
+}
+#button-start {
+  width: 100px;
+  background: #11b713;
+}
+#color-txt > p {
+  margin: 70px auto 20px;
+  font: 700 30px "Times New Roman", serif;
+  text-align: center;
+}
+#final-score {
+  font: 400 34px "RocknRoll One";
+}
+#img-logo {
+  height: 87px;
+  width: 228px;
+  margin: 16px 12px 8px;
+  padding: 12px;
+  border-style: inset;
+  background: linear-gradient(
+    rgb(30, 30, 30) 0%,
+    rgb(200, 200, 200) 30%,
+    rgb(255, 255, 255) 50%,
+    rgb(200, 200, 200) 70%,
+    rgb(30, 30, 30) 100%
+  );
+  
+  /* Tamanho real: 685 x 263 */
+}
+#page-header {
+  display: flex;
+}
+#player-input {
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+#timer {
+  font-size: 19px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 419.98px) {
+  #img-logo {
+    margin: 12px auto;
+  }
+  #page-header {
+    flex-direction: column;
+  }
+}
